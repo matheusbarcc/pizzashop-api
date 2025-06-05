@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1701433741648,
+      "tag": "0000_broken_madelyne_pryor",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1701809816085,
+      "tag": "0001_soft_frog_thor",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1749145845498,
+      "tag": "0002_round_hitman",
+      "breakpoints": true
+    }
+  ]
+}
