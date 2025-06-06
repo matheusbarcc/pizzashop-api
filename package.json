@@ -9,7 +9,7 @@
     "migrate": "bun src/db/migrate.ts",
     "seed": "bun src/db/seed.ts",
     "build": "bun build src/http/server.ts --outdir dist --target bun",
-    "start": "bun dist/server.js"
+    "start": "bun src/http/server.ts"
   },
   "author": "Diego Fernandes <diego.schell.f@gmail.com>",
   "contributors": [
