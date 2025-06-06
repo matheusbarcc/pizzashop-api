@@ -36,13 +36,12 @@ const app = new Elysia()
         const origin = request.headers.get("origin");
 
         if (!origin) {
-          return true; // Permite requisições sem origin (Postman, curl, etc.)
+          return true;
         }
 
-        // Lista de origens permitidas
         const allowedOrigins = [
-          "http://localhost:5173", // Vite dev server
-          "https://pizzashop-web-nine.vercel.app/", // Sua app no Vercel
+          "http://localhost:5173",
+          "https://pizzashop-web-nine.vercel.app",
         ];
 
         return allowedOrigins.includes(origin);
