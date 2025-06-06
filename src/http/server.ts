@@ -30,16 +30,22 @@ const app = new Elysia()
   .use(
     cors({
       credentials: true,
-      allowedHeaders: ["content-type"],
+      allowedHeaders: ["content-type", "authorization", "x-requested-with"],
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
       origin: (request): boolean => {
         const origin = request.headers.get("origin");
 
         if (!origin) {
-          return false;
+          return true; // Permite requisições sem origin (Postman, curl, etc.)
         }
 
-        return true;
+        // Lista de origens permitidas
+        const allowedOrigins = [
+          "http://localhost:5173", // Vite dev server
+          "https://pizzashop-web-nine.vercel.app/", // Sua app no Vercel
+        ];
+
+        return allowedOrigins.includes(origin);
       },
     })
   )
